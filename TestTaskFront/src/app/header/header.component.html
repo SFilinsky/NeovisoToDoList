@@ -1,0 +1,22 @@
+<div class="header">
+  <h1> {{title}} </h1>
+  <div *ngIf="info.token" class="header-element" (click)="toggleShowToken()">
+    <h2>Your Information </h2>
+    <h5>(Click to show your Auth info)</h5>
+    <p>
+      <strong class="username">Username:</strong> {{info.username}}
+    </p>
+    <p *ngIf="showToken">
+      <strong class="roles">Roles:</strong> {{info.authorities}} <br/>      
+      <strong class="token">Token:</strong> {{info.token}}. 
+    </p>
+  </div>
+  <div id="panel">
+    <a *ngIf="info.token == null" routerLink="/login" class="header_element"><div>Authorize</div></a>
+    <a *ngIf="info.token == null" routerLink="/register" class="header_element"><div>Register</div></a>
+
+    <a *ngIf="info.token" routerLink="/dashboard" class="header_element"><div>Dashboard</div></a>
+    <a *ngIf="info.token" routerLink="/tasks" class="header_element"><div>Tasks</div></a>
+    <a *ngIf="info.token" class="header_element" (click)="logout()"><div>Log Out</div></a>
+  </div>  
+</div>

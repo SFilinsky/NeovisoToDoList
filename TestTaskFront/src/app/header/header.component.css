@@ -1,0 +1,42 @@
+.header {
+    margin: 5px;  
+    background-color: #FAFADD;  
+    width: 18em;
+}
+.header h1 {
+    color: #2787b8;    
+    text-shadow: #777 1px 1px; 
+}
+.header h2 {
+    margin: 0px;
+}
+.header h5 {
+    margin: 0px;
+}
+.header a {
+    padding: 5px 10px;
+    text-decoration: none;
+    margin: 2px 10px 0px 2px;
+    display: inline-block;
+    background-color: #eee;
+    border-radius: 4px;
+    border: #ddd solid 1px; 
+}
+.header a:visited, a:link {
+    color: #607d8b;
+}
+.header a:hover {
+    color: #039be5;
+    background-color: #cfd8dc;
+    cursor: pointer;
+}
+.header a.active {
+    color: #039be5;
+}
+.header #panel {
+    display: flex;
+}
+
+.header .header_element {
+    margin-bottom: 10px;
+}
